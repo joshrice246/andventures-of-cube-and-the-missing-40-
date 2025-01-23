@@ -145,7 +145,7 @@ namespace goofy_platformer
             }
 
             //foreach 1 used for determening if player is touching platforms, killboxes, portals 
-            
+            //by goigh through everything contained in it one by one once , before going to the next section
             foreach (Control x in this.Controls)
             { //declare x as control
 
