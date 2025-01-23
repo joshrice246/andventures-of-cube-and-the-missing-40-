@@ -20,6 +20,8 @@ namespace goofy_platformer
     //if you die sounds dont play anymore
     //some how possible to float cant recreate
 
+    //ran out of time did not add momentum
+
     public partial class Form1 : Form
     { //global variables
         int money = 0;
