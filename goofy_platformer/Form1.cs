@@ -195,6 +195,7 @@ namespace goofy_platformer
 
             //foreach 2 used to determine if you are touching a npc chat box if you touch it sense its a foreach it will
             //run through everything one by one but since its active and your locked to 503, 343 you're stuck in a cutscene
+            //till it exits the foreach
             foreach (Control x in this.Controls)
             {
                 if ((string)x.Tag == "chbox" && talked2 == true)
