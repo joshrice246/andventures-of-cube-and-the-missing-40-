@@ -522,7 +522,7 @@ namespace goofy_platformer
 
         void death()
         {
-            //movement lock till bind pressed
+            //movement lock till binds pressed
             jump = false;
             aPressed = false;
             sPressed = false;
