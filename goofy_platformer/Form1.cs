@@ -145,7 +145,10 @@ namespace goofy_platformer
             }
 
             //foreach 1 used for determening if player is touching platforms, killboxes, portals 
-            //by going through everything contained in it one by one once before going to the next section
+            //by going through everything contained in it one by one to check if any statements are currently active
+            //if not it exits then goes to the next section
+            //if you touched one it will run whats contained in the interacts with if statemeant same is true for
+            //all foreach's usedc on this program
             foreach (Control x in this.Controls)
             { //declare x as control
 
@@ -193,9 +196,12 @@ namespace goofy_platformer
                 }
             }
 
-            //foreach 2 used to determine if you are touching a npc chat box if you touch it sense its a foreach it will
-            //run through everything one by one but since its active and your locked to 503, 343 you're stuck in a cutscene
-            //till it exits the foreach
+            //foreach 2 used to determine if you are touching a chat box it will run through whats contained 
+            //if nothing is interacted with it will go to the next section
+            //if you interact with one of the interacts it will
+            //run through everything one by one till it lands on the one you interacted with
+            //then locks you in place and then runs the text then
+            //it exits the foreach
             foreach (Control x in this.Controls)
             {
                 if ((string)x.Tag == "chbox" && talked2 == true)
