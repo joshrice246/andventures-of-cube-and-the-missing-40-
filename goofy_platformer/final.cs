@@ -175,7 +175,7 @@ namespace goofy_platformer
 
 
                             int randomval = rand.Next(1, 101);
-
+                            //70% chance you win 30% you lose
                             if (randomval < 70)
                             {
                                 winner = true;
@@ -253,9 +253,10 @@ namespace goofy_platformer
                                 Thread.Sleep(100);
                                 npctxt.Text += $"o";
                                 Refresh();
-                                Thread.Sleep(1000);
+                                Thread.Sleep(200);
                                 System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources._677080__silverillusionist__healing_soft_ripple);
                                 player.Play();
+                                Thread.Sleep(2000);
                                 npctxt.Text = $"GOOD ENDING\nYOU MAY EXIT VIA PORTAL";
                                 Refresh();
                                 key = true;
@@ -311,12 +312,12 @@ namespace goofy_platformer
                                 Thread.Sleep(100);
                                 npctxt.Text += $"T";
                                 Refresh();
-                                Thread.Sleep(1000);
+                                Thread.Sleep(200);
                                 System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources._350984__cabled_mess__lose_c_03);
                                 player.Play();
+                                Thread.Sleep(2000);
                                 npctxt.Text = $"BAD ENDING\nYOU MAY EXIT VIA PORTAL";
                                 Refresh();
-                                Thread.Sleep(4000);
                                 key = true;
                             }
                         }
