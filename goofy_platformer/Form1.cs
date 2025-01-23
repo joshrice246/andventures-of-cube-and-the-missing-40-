@@ -516,7 +516,7 @@ namespace goofy_platformer
             {
                 death();
             }
-          
+          //refresh loop
             Refresh();
         }
 
