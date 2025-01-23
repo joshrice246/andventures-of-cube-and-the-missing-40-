@@ -187,7 +187,8 @@ namespace goofy_platformer
 
                             if (winner == true)
                             {
-                               
+                                player1.Left = 503;
+                                player1.Top = 343;
                                 Thread.Sleep(1000);
                                 money = 0;
                                 npctxt.Text = $"cubius:";
@@ -255,14 +256,15 @@ namespace goofy_platformer
                                 Thread.Sleep(1000);
                                 System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources._677080__silverillusionist__healing_soft_ripple);
                                 player.Play();
-                                npctxt.Text = $"GOOD ENDING";
+                                npctxt.Text = $"GOOD ENDING\nYOU MAY EXIT VIA PORTAL";
                                 Refresh();
                                 key = true;
                             }
 
                             if (loser == true)
                             {
-                               
+                                player1.Left = 503;
+                                player1.Top = 343;
                                 money = 0;
                                 npctxt.Text = $"cubius:";
                                 qtext.Text = $"Quest's:";
@@ -312,7 +314,7 @@ namespace goofy_platformer
                                 Thread.Sleep(1000);
                                 System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources._350984__cabled_mess__lose_c_03);
                                 player.Play();
-                                npctxt.Text = $"BAD ENDING";
+                                npctxt.Text = $"BAD ENDING\nYOU MAY EXIT VIA PORTAL";
                                 Refresh();
                                 Thread.Sleep(4000);
                                 key = true;
