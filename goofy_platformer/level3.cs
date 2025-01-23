@@ -235,22 +235,7 @@ namespace goofy_platformer
 
             if (hp < 1)
             {
-           
-                jump = false;
-                aPressed = false;
-                sPressed = false;
-                dPressed = false;
-                gameOver = true;
-
-                qtext.Text = $"GAME OVER\npress ENTER to restart\npress ESC to exit";
-                foreach (Control x in this.Controls)
-                {
-                    if (x is PictureBox && x.Visible == false)
-                    {
-                        x.Visible = true;
-
-                    }
-                }
+                death();
             }
 
 
@@ -261,6 +246,24 @@ namespace goofy_platformer
             }
 
             Refresh();
+        }
+        
+        void death()
+        {
+            //movement lock till bind pressed
+            jump = false;
+            aPressed = false;
+            sPressed = false;
+            dPressed = false;
+
+            points.Text = $"money: {money}$";
+            qtext.Text = $"GAME OVER\npress ENTER to restart\npress ESC to exit";
+
+            //music on death
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources._518307__mrthenoronha__death_song_8_bit);
+            player.Play();
+            Thread.Sleep(100);
+            gameOver = true;
         }
 
         void reset()

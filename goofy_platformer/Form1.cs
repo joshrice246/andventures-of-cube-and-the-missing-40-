@@ -507,34 +507,36 @@ namespace goofy_platformer
                     }
                 }
             }
-            //death
+            //death if hp is less than 1
             if (hp < 1)
             {
-                //movement lock till bind pressed
-                jump = false;
-                aPressed = false;
-                sPressed = false;
-                dPressed = false;
-                gameOver = true;
-
-                money = 0;
-
-                points.Text = $"money: {money}$";
-                qtext.Text = $"";
-                npctxt.Text = $"";
-                gover.Text = $"GAME OVER\npress ENTER to restart\npress ESC to exit";
-              
+                death();
             }
-            //music on death
-            if (gameOver == true)
-            {
-                System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources._518307__mrthenoronha__death_song_8_bit);
-                player.Play();
-            }
-
+          
             Refresh();
         }
 
+        void death()
+        {
+            //movement lock till bind pressed
+            jump = false;
+            aPressed = false;
+            sPressed = false;
+            dPressed = false;
+
+            money = 0;
+
+            points.Text = $"money: {money}$";
+            qtext.Text = $"";
+            npctxt.Text = $"";
+            gover.Text = $"GAME OVER\npress ENTER to restart\npress ESC to exit";
+
+            //music on death
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources._518307__mrthenoronha__death_song_8_bit);
+            player.Play();
+            Thread.Sleep(100);
+            gameOver = true;
+        }
 
         private void reset()
         {
@@ -549,7 +551,8 @@ namespace goofy_platformer
             hp = 3;
 
             points.Text = $"money: {money}$";
-          
+            gover.Text = $"";
+
             //reset postition
             player1.Left = 26;
             player1.Top = 713;

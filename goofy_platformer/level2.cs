@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.Threading;
 namespace goofy_platformer
 {
     public partial class level2 : Form
@@ -194,30 +195,9 @@ namespace goofy_platformer
 
             if (hp < 1)
             {
-                jump = false;
-                aPressed = false;
-                sPressed = false;
-                dPressed = false;
-                gameOver = true;
-
-                qtext.Text = $"";
-                gover.Text = $"GAME OVER\npress ENTER to restart\npress ESC to exit";
-
-                foreach (Control x in this.Controls)
-                {
-                    if (x is PictureBox && x.Visible == false)
-                    {
-                        x.Visible = true;
-
-                    }
-                }
+                death();
             }
-
-            if (gameOver == true)
-            {
-                System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources._518307__mrthenoronha__death_song_8_bit);
-                player.Play();
-            }
+          
             //if money is greater then or equal to 15 allow exit 
             if (money >= 15)
             {
@@ -230,6 +210,26 @@ namespace goofy_platformer
             }
 
             Refresh();
+        }
+
+
+        void death()
+        {
+            //movement lock till bind pressed
+            jump = false;
+            aPressed = false;
+            sPressed = false;
+            dPressed = false;
+
+            points.Text = $"money: {money}$";
+            qtext.Text = $"";
+            gover.Text = $"GAME OVER\npress ENTER to restart\npress ESC to exit";
+
+            //music on death
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources._518307__mrthenoronha__death_song_8_bit);
+            player.Play();
+            Thread.Sleep(100);
+            gameOver = true;
         }
 
         private void reset()
