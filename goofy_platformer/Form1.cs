@@ -16,6 +16,10 @@ namespace goofy_platformer
     // though learning to use them was more work then required
     // i now have the knowledge to use them and make a mildly more complicated game
    
+    //known issues
+    //if you die sounds dont play anymore
+    //some how possible to float cant recreate
+
     public partial class Form1 : Form
     { //global variables
         int money = 0;
