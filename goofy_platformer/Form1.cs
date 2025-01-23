@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Media;
 namespace goofy_platformer
 {
+    //notes
     // chose to use picture boxes over graphics due to the tedious nature of graphics
     // though learning to use them was more work then required
     // i now have the knowledge to use them and make a mildly more complicated game
@@ -20,6 +21,7 @@ namespace goofy_platformer
     //if you die sounds dont play anymore
     //some how possible to float cant recreate
 
+    //etc
     //ran out of time did not add momentum
 
     public partial class Form1 : Form
