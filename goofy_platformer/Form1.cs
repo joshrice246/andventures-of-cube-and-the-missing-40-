@@ -358,7 +358,7 @@ namespace goofy_platformer
                 if ((string)x.Tag == "chbox2")
                 {
                     if (talked == true)
-                    {
+                    {//true due to above
                         if (player1.Bounds.IntersectsWith(x.Bounds))
                         {
                             player1.Left = 426;
