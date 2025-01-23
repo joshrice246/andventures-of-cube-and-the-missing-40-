@@ -129,7 +129,7 @@ namespace goofy_platformer
             }
             if (jump == true && grav < 0)
             {
-                //if falling all jump if you havent jumped
+                //if falling and jump is not active you can jump 
                 jump = false;
             }
             if (jump == true)
@@ -137,7 +137,7 @@ namespace goofy_platformer
                 jumpspeed = -8;
                 //jumpspeed 0 you cant jump any more
                 grav -= 1;
-                //if jump is active -grav to make you fall at a reasonable speed
+                //if jump is active grav is negative to make you fall at a reasonable speed
             }
             else
             {
@@ -145,7 +145,7 @@ namespace goofy_platformer
             }
 
             //foreach 1 used for determening if player is touching platforms, killboxes, portals 
-            //by going through everything contained in it one by one once , before going to the next section
+            //by going through everything contained in it one by one once before going to the next section
             foreach (Control x in this.Controls)
             { //declare x as control
 
