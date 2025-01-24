@@ -195,6 +195,7 @@ namespace goofy_platformer
 
             if (hp < 1)
             {
+                gameTimer.Stop();
                 death();
             }
           
@@ -230,7 +231,6 @@ namespace goofy_platformer
             //music on death
             System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources._518307__mrthenoronha__death_song_8_bit);
             player.Play();
-            Thread.Sleep(100);
             gameOver = true;
         }
 

@@ -358,6 +358,7 @@ namespace goofy_platformer
                         qtext.Text = $"Quest's: go thorugh the portal";
                         //allow use of other chat box
                         talked = true;
+                        //disable chatbox
                         talked2 = false;
                     }
                 }
@@ -506,6 +507,7 @@ namespace goofy_platformer
                             Thread.Sleep(100);
                             npctxt.Text += $".";
                             Refresh();
+                            //disable chat box
                             talked = false;
                             //allow use of portal
                             key = true;
