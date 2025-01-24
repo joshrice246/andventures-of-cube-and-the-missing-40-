@@ -15,7 +15,6 @@ namespace goofy_platformer
     //notes
     // chose to use picture boxes over graphics due to the tedious nature of graphics
     // though learning to use them was more work then required
-    // i now have the knowledge to use them and make a mildly more complicated game
    
     //known issues
     //if you die sounds dont play anymore /fixed
