@@ -532,7 +532,7 @@ namespace goofy_platformer
             aPressed = false;
             sPressed = false;
             dPressed = false;
-
+            //stop player from moving
             player1Speed = 0;
 
             points.Text = $"money: {money}$";
@@ -555,6 +555,7 @@ namespace goofy_platformer
             dPressed = false;
             gameOver = false;
 
+            //reset player speed money and hp on reset
             player1Speed = 9;
             money = 0;
             hp = 3;
