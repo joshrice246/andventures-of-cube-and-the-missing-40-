@@ -347,6 +347,8 @@ namespace goofy_platformer
             sPressed = false;
             dPressed = false;
 
+            player1Speed = 0;
+
             points.Text = $"money: {money}$";
             qtext.Text = $"GAME OVER\npress ENTER to restart\npress ESC to exit";
 
@@ -366,6 +368,7 @@ namespace goofy_platformer
             dPressed = false;
             gameOver = false;
 
+            player1Speed = 9;
             money = 0;
             hp = 3;
 

@@ -142,10 +142,10 @@ namespace goofy_platformer
             }
             if (jump == true)
             {
-                jumpspeed = -8;
                 //jumpspeed 0 you cant jump any more
-                grav -= 1;
+                jumpspeed = -8;
                 //if jump is active grav is negative to make you fall at a reasonable speed
+                grav -= 1;
             }
             else
             {
@@ -518,6 +518,7 @@ namespace goofy_platformer
             //death if hp is less than 1
             if (hp < 1)
             {
+                gameTimer.Stop();
                 death();
             }
           //refresh loop
@@ -532,7 +533,7 @@ namespace goofy_platformer
             sPressed = false;
             dPressed = false;
 
-            money = 0;
+            player1Speed = 0;
 
             points.Text = $"money: {money}$";
             qtext.Text = $"";
@@ -542,7 +543,6 @@ namespace goofy_platformer
             //music on death
             System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources._518307__mrthenoronha__death_song_8_bit);
             player.Play();
-            Thread.Sleep(100);
             gameOver = true;
         }
 
@@ -555,6 +555,7 @@ namespace goofy_platformer
             dPressed = false;
             gameOver = false;
 
+            player1Speed = 9;
             money = 0;
             hp = 3;
 

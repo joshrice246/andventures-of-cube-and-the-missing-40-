@@ -202,10 +202,10 @@ namespace goofy_platformer
                 }
             }
             //plat form movement
-            // adds plat v speed to x and Y
+            // adds plat v to the Y axis allowing the 
             //platform moves on Y axis down
             //then when it hits a specific Y location it changes to a negative number 
-            //allowing up words movement
+            //allowing upwards movement
             plat4.Location = new Point(plat4.Location.X, plat4.Location.Y + platVspeed);
 
             if (plat4.Location.Y >= 530)
@@ -256,6 +256,8 @@ namespace goofy_platformer
             sPressed = false;
             dPressed = false;
 
+            player1Speed = 0;
+
             points.Text = $"money: {money}$";
             qtext.Text = $"GAME OVER\npress ENTER to restart\npress ESC to exit";
 
@@ -279,7 +281,7 @@ namespace goofy_platformer
             points.Text = $"money: {money}$";
             qtext.Text = $"";
             hp = 3;
-           
+            player1Speed = 9;
 
             player1.Left = 26;
             player1.Top = 713;
