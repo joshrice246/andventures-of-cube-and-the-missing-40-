@@ -18,7 +18,7 @@ namespace goofy_platformer
     // i now have the knowledge to use them and make a mildly more complicated game
    
     //known issues
-    //if you die sounds dont play anymore
+    //if you die sounds dont play anymore /fixed
     //some how possible to float cant recreate
 
     //etc
@@ -50,8 +50,7 @@ namespace goofy_platformer
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-            //load starter position and text 
+        {    //load starter position and text 
             player1.Left = 26;
             player1.Top = 701;
             qtext.Text = $"Quest's: talk to cubius";
