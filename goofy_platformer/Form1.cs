@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using System.Media;
 namespace goofy_platformer
 {
+    //sadly did not have enough time to add as much as i wanted to add
+
     //notes
     // chose to use picture boxes over graphics due to the tedious nature of graphics
     // though learning to use them was more work then required
